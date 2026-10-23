@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f4fef2415e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Task20</title>
+</head>
+<body>
+    <!-- header logo, nav, button -->
+    <section class="header">
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <button class="btn1">Username</button>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-left">
+                <h1>Revitalize Your <br> Clothes with Expert <br> <span>Laundry Services!</span></h1>
+                <p>From premium dry cleaning to swift wash and fold, we deliver
+                    care and convenience. Schedule a pickup and rediscover the freshness of 
+                    your clothes today!
+                </p>
+                <button class="btn2" onclick="scrollToBooking()">Book a Service Today</button>
+            </div>
+            <div class="hero-right">
+                <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=600" alt="Laundry Service">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview Section -->
+
+    <section class="overview-section">
+        <div class="container">
+            <div class="overview-grid">
+                <h1>Our Achievements</h1>
+                <div class="overview-item">
+                    <h2>15+</h2>
+                    <p>Laundry Services</p>
+                </div>
+                <div class="overview-item">
+                    <h2>240+</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="overview-item">
+                    <h2>2+ Yrs</h2>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Service Section -->
+      <section id="services" class="booking-section">
+        <div class="container">
+            
+            <div class="booking-container">
+                
+
+                <!-- Left Div: Available Services -->
+                <div class="booking-left">
+                    <h3>Our Services</h3>
+                    <p>Click to the add to cart Button to add the services to your cart</p>
+                    <br>
+                    <div id="services-list">
+                        <!-- Dynamic services injected via JS -->
+                    </div>
+                    <div class="cart-info-note">
+                        <i class="fa-solid fa-circle-info"></i> Add items to the cart using the "Add Items" button next to each service.
+                    </div>
+                </div>
+
+                
+                <!-- Right Div: Dynamic Cart & Booking Form -->
+                <div class="booking-right">
+                    
+                    <!-- First Div: Cart Summary -->
+                    <div class="cart-summary">
+                        <h3>Added Items</h3>
+                        <div id="cart-items" class="cart-items">
+                            <p class="empty-cart-msg">No items Added</p>
+                        </div>
+                        <div class="cart-total">
+                            <span class="ta">Total Amount:</span>
+                            <span class="ta">₹<span id="total-amount" class="ta">0</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Second Div: Booking Form -->
+                    <div class="booking-form-card">
+                        <h3>Book Now</h3>
+                        <form id="booking-form" onsubmit="handleBooking(event)">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <button type="submit" class="btn-primary btn-full">Book Now</button>
+                        </form>
+                        <div id="confirmation-message" class="confirmation-msg">
+                            Thank you For Booking the Service We will get back to you soon!
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Description Section -->
+    <section id="about" class="quality-section">
+        <div class="container">
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3>Premium Services</h3>
+                    <p>We use eco-friendly detergents and advanced equipment to ensure fabric care.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Quick Support</h3>
+                    <p>Dedicated customer support ready to assist you with any inquiries.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Timely Delivery</h3>
+                    <p>Express turnaround times and hassle-free pickup and doorstep delivery.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-tags"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Transparent pricing with high-quality service at competitive rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="subbtn">
+        <div>
+            <h1>Subscibe to our <br> newsletter.</h1>
+        </div>
+        <div class="sub-btn">
+            <button class="btn4">Full Name</button>
+            <button class="btn4">Email</button>
+            <button class="btn4">Subscribe</button>
+        </div>
+        <!-- <div>
+            <button class="btn4">Email</button>
+        </div> -->
+    </section>
+
+
+    <search class="footer">
+
+        <div>
+            <h2>Logo</h2>
+            <h4>About Us</h4>
+            <p>Lorem ipsum cam voluptates <br> recusandae neque porro, <br> placeat labore quos inventore libero!</p>
+        </div>
+        <div>
+            <h4>Important Links</h4>
+            <p>About Us</p>
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>Refund Policy</p>
+        </div>
+        <div>
+            <h4>contact</h4>
+            <p>mai@gmail.com</p>
+            <p>-91+9123546820</p>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+
+    </search>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
